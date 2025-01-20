@@ -47,6 +47,11 @@
           minimumFractionDigits: 2,
           maximumFractionDigits: 2,
         });
+		
+		const formattedAvailableBalance = availableBalance.toLocaleString("en-US", {
+          minimumFractionDigits: 2,
+          maximumFractionDigits: 2,
+        });
         $availableBalanceElement.text(`Spent: $${formattedSpentAmount} out of $${formattedCreditLimit}`);
       } else {
         console.warn("Unable to parse available balance value.");
